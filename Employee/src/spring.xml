@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions -->
+
+	<bean id="p1" class="com.model.Emp">
+
+		<!-- Type ambigutiy -->
+	<!-- 	<constructor-arg value="1001" type="int"></constructor-arg>
+		<constructor-arg value="20" type="int"></constructor-arg>
+		<constructor-arg value="Nayana" type="java.lang.String"></constructor-arg>
+ -->
+
+
+		<!-- Using Name attribute -->
+		<constructor-arg value="1001" type="double"></constructor-arg>
+		<constructor-arg value="20" type="double"></constructor-arg>
+		<constructor-arg value="Nayana" type="java.lang.String"></constructor-arg>
+	</bean>
+
+</beans>

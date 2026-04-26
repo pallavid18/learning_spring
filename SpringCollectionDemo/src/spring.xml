@@ -6,16 +6,24 @@
 
 	<!-- bean definitions here -->
 
+	<!-- Contrustor injection -->
+	<!-- <bean id="q1" class="com.model.Question"> <constructor-arg value="101"></constructor-arg> 
+		<constructor-arg value="What is Java?"></constructor-arg> <constructor-arg> 
+		<list> <value>Java is Programming Language</value> <value>Java is Platform 
+		Independent</value> <value>Java is Secured</value> </list> </constructor-arg> 
+		</bean> -->
+
+	<!-- Setter injection -->
+
 	<bean id="q1" class="com.model.Question">
-		<constructor-arg value="101"></constructor-arg>
-		<constructor-arg value="What is Java?"></constructor-arg>
-		<constructor-arg>
+		<property name="id" value="101"></property>
+		<property name="qname" value="What is Java?"></property>
+		<property name="answer">
 			<list>
 				<value>Java is Programming Language</value>
 				<value>Java is Platform Independent</value>
 				<value>Java is Secured</value>
 			</list>
-		</constructor-arg>
+		</property>
 	</bean>
-
 </beans>

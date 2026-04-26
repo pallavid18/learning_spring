@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions -->
+
+	<bean id="p1" class="com.model.Person">
+
+		<!-- Type ambigutiy -->
+		<!-- <constructor-arg value="Nayana" type="java.lang.String"></constructor-arg> 
+			<constructor-arg value="1001" type="int"></constructor-arg> -->
+
+		<!-- Using index attribute -->
+		<!-- <constructor-arg value="Nayana" index="0"></constructor-arg> <constructor-arg 
+			value="1001" index="1" type="int"></constructor-arg> -->
+
+
+		<!-- Using Name attribute -->
+		<constructor-arg name="city" value="Pune"></constructor-arg>
+		<constructor-arg name="country" value="India" ></constructor-arg>
+
+	</bean>
+
+</beans>
