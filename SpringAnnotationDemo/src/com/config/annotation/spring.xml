@@ -2,14 +2,25 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
-http://www.springframework.org/schema/context/spring-context.xsd">
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<bean id="instructor" class="com.config.annotation.Instructor">
-
-	</bean>
+	<context:component-scan base-package="com.config.annotation"></context:component-scan>
+	
+	<util:list  id="topics">
+	<value>Java</value>
+	<value>Python</value>
+	<value>Android</value>
+	<value>Swift</value>
+	<value>Data Analytics</value>
+	</util:list>
+	<!-- without bean we can execute dthe pojo class by giving the ibj to compenent  -->
+<!-- 	<bean id="instructor" class="com.config.annotation.Instructor"></bean> -->
 </beans>
