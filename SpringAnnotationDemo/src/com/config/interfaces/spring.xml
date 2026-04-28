@@ -11,15 +11,11 @@ http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<context:component-scan base-package="com.config.annotation"></context:component-scan>
-	
-	<util:list  id="topics">
-	<value>Java</value>
-	<value>Python</value>
-	<value>Android</value>
-	<value>Swift</value>
-	<value>Data Analytics</value>
-	</util:list>
-	<!-- without bean we can execute dthe pojo class by giving the ibj to compenent  -->
-<!-- 	<bean id="instructor" class="com.config.annotation.Instructor"></bean> -->
+<!--  	<bean class="com.config.interfaces.OrderDaoImpl" name="dao"></bean>
+	<bean class="com.config.interfaces.OrderImpl" name="oi">
+		<property name="dao" ref="dao"></property>
+	</bean> 
+-->
+<context:component-scan base-package="com.config.interfaces"></context:component-scan>
+
 </beans>
