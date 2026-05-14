@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.springboot_restapi_test.exception.PersonNotFoundException;
 import com.example.springboot_restapi_test.model.Person;
 import com.example.springboot_restapi_test.repositry.PersonRepository;
 
@@ -22,7 +23,8 @@ public class PersonService {
 	}
 	
 	public Person getPersonById(Long id) {
-		return personRepository.findById(id).orElse(null);
+		return personRepository.findById(id).orElseThrow(()-> new PersonNotFoundException("Person not found with mentioned id "));
+//		return personRepository.findById(id).orElse(null);
 		/* return personRepository.findById(id).orElseThrow("no data avialable"); */
 	}
 	
